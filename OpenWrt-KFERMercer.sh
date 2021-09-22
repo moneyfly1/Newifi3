@@ -245,7 +245,7 @@ CONFIG_PACKAGE_luci-app-watchcat=y
 EOF
 
 # LuCI主题:
-#cat >> .config <<EOF
+cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-theme-atmaterial=y
 #CONFIG_PACKAGE_luci-theme-bootstrap=y
 #CONFIG_PACKAGE_luci-theme-argon_new=y
@@ -253,10 +253,10 @@ EOF
 #CONFIG_PACKAGE_luci-theme-netgear=y
 #CONFIG_PACKAGE_luci-theme-edge=y
 #CONFIG_PACKAGE_luci-theme-material=y
-#EOF
+EOF
 
 # 常用软件包:
-#cat >> .config <<EOF
+cat >> .config <<EOF
 #CONFIG_PACKAGE_curl=y
 #CONFIG_PACKAGE_htop=y
 #CONFIG_PACKAGE_nano=y
@@ -264,7 +264,7 @@ EOF
 #CONFIG_PACKAGE_tree=y
 #CONFIG_PACKAGE_vim-fuller=y
 #CONFIG_PACKAGE_wget=y
-#EOF
+EOF
 
 # 其他软件包:
 cat >> .config <<EOF
