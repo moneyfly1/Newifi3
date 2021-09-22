@@ -20,7 +20,7 @@ cat feeds.conf.default
 
 # 删除软件包
 #rm -rf ./package/diy/adguardhome
-#rm -rf ./package/diy/luci-app-adguardhome
+rm -rf ./package/diy/luci-app-adguardhome
 
 # 添加第三方软件包
 #git clone https://github.com/gbaoye/openwrt-packages package/openwrt-packages
@@ -170,6 +170,7 @@ CONFIG_PACKAGE_luci-app-ssr-plus=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=n
 EOF
+
 # Passwall插件:
 #cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-passwall=y
