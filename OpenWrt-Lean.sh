@@ -31,7 +31,7 @@ cat feeds.conf.default
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 #git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
-git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic luci-app-unblockneteasemusic
+#git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic luci-app-unblockneteasemusic
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-openclash package/luci-app-openclash
 
 # 下载自定义软件
@@ -217,7 +217,7 @@ CONFIG_PACKAGE_luci-app-watchcat=y
 #CONFIG_PACKAGE_luci-app-hd-idle is not set #磁盘休眠
 #CONFIG_PACKAGE_luci-app-wrtbwmon is not set #实时流量监测
 #CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
-CONFIG_PACKAGE_luci-app-unblockneteasemusic
+#CONFIG_PACKAGE_luci-app-unblockneteasemusic
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_NodeJS=y
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go=y
 # CONFIG_PACKAGE_luci-app-airplay2 is not set #Apple AirPlay2音频接收服务器
