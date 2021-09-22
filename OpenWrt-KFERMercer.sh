@@ -27,7 +27,7 @@ cat feeds.conf.default
 #git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
+#git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
@@ -251,7 +251,7 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-theme-argon_new=y
 #CONFIG_PACKAGE_luci-theme-argon
 #CONFIG_PACKAGE_luci-theme-netgear=y
-CONFIG_PACKAGE_luci-theme-edge=y
+#CONFIG_PACKAGE_luci-theme-edge=y
 #CONFIG_PACKAGE_luci-theme-material=y
 EOF
 
