@@ -28,7 +28,7 @@ cat feeds.conf.default
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
-git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+#git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
 #git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic luci-app-unblockneteasemusic
@@ -162,14 +162,14 @@ CONFIG_PACKAGE_luci-app-clash=y
 EOF
 
 # ShadowsocksR插件:
-cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-ssr-plus=n
+#cat >> .config <<EOF
+#CONFIG_PACKAGE_luci-app-ssr-plus=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=n
-EOF
+#EOF
 
 # Passwall插件:
 #cat >> .config <<EOF
@@ -245,7 +245,7 @@ CONFIG_PACKAGE_luci-app-watchcat=y
 EOF
 
 # LuCI主题:
-cat >> .config <<EOF
+#cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-theme-atmaterial=y
 #CONFIG_PACKAGE_luci-theme-bootstrap=y
 #CONFIG_PACKAGE_luci-theme-argon_new=y
@@ -253,7 +253,7 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-theme-netgear=y
 #CONFIG_PACKAGE_luci-theme-edge=y
 #CONFIG_PACKAGE_luci-theme-material=y
-EOF
+#EOF
 
 # 常用软件包:
 #cat >> .config <<EOF
