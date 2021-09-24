@@ -131,11 +131,11 @@ EOF
 #EOF
 
 # IPv6支持:
-cat >> .config <<EOF
-CONFIG_PACKAGE_ipv6helper=y
-CONFIG_PACKAGE_ip6tables-mod-nat=y
-CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
-EOF
+#cat >> .config <<EOF
+#CONFIG_PACKAGE_ipv6helper=y
+#CONFIG_PACKAGE_ip6tables-mod-nat=y
+#CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+#EOF
 
 # 多文件系统支持:
 # cat >> .config <<EOF
@@ -194,6 +194,7 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 #CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-app-ttyd=y
+CONFIG_PACKAGE_luci-app-easymesh=y
 #CONFIG_PACKAGE_luci-app-webadmin=n #Web管理页面设置
 #CONFIG_PACKAGE_luci-app-ddns=y #DDNS服务
 CONFIG_DEFAULT_luci-app-vlmcsd=n #KMS激活服务器
