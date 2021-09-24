@@ -127,6 +127,7 @@ EOF
 #CONFIG_PACKAGE_kmod-mt76x2e=n
 #CONFIG_PACKAGE_wpad-openssl=y
 #CONFIG_PACKAGE_wpa-supplicant=y
+#CONFIG_PACKAGE_luci-app-mtwifi=n
 #EOF
 
 # IPv6支持:
@@ -230,7 +231,6 @@ CONFIG_PACKAGE_luci-app-watchcat=y
 # CONFIG_PACKAGE_luci-app-music-remote-center is not set #PCHiFi数字转盘遥控
 # CONFIG_PACKAGE_luci-app-usb-printer is not set #USB打印机
 #CONFIG_PACKAGE_luci-app-sqm=y #SQM智能队列管理
-#CONFIG_PACKAGE_luci-app-mtwifi=n
 #
 # VPN相关插件(禁用):
 #
