@@ -19,8 +19,9 @@ cat feeds.conf.default
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
 # 删除软件包
-#rm -rf ./package/diy/adguardhome
-#rm -rf ./package/diy/luci-app-adguardhome
+rm -rf ./package/lean/UnblockNeteaseMusic
+rm -rf ./package/lean/UnblockNeteaseMusic-Go
+rm -rf ./package/lean/luci-app-unblockmusic
 
 # 添加第三方软件包
 #git clone https://github.com/gbaoye/openwrt-packages package/openwrt-packages
