@@ -105,23 +105,24 @@ CONFIG_TARGET_ramips_mt7621=y
 CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
 EOF
 
-# 无线驱动
+# 文件系统镜像等支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_wireless-regdb=y
-CONFIG_PACKAGE_kmod-cfg80211=y
-CONFIG_PACKAGE_kmod-mac80211=y
-CONFIG_PACKAGE_MAC80211_DEBUGFS=y
-CONFIG_PACKAGE_MAC80211_MESH=y
-#use opensource wifi driver
-CONFIG_PACKAGE_kmod-mt7603=y
-CONFIG_PACKAGE_kmod-mt7603e=n
-CONFIG_PACKAGE_kmod-mt76x2=y
-CONFIG_PACKAGE_kmod-mt76x2-common=y
-CONFIG_PACKAGE_kmod-mt76x2e=n
-CONFIG_PACKAGE_wpad-openssl=y
-CONFIG_PACKAGE_wpa-supplicant=y
-CONFIG_PACKAGE_luci-app-mtwifi=n
-#EOF
+CONFIG_TARGET_ROOTFS_SQUASHFS=y
+# CONFIG_TARGET_ROOTFS_EXT4FS is not set
+# CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256
+# CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
+# CONFIG_TARGET_UBIFS_JOURNAL_SIZE=""
+EOF
+
+# 固件压缩:
+cat >> .config <<EOF
+CONFIG_TARGET_IMAGES_GZIP=y
+EOF
+
+# 无线驱动(开源)
+cat >> .config <<EOF
+CONFIG_PACKAGE_kmod-mt76=y
+EOF
 
 # IPv6支持:
 cat >> .config <<EOF
@@ -192,9 +193,10 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 CONFIG_PACKAGE_luci-app-easymesh=y
+CONFIG_PACKAGE_luci-app-smartdns=y
 #CONFIG_PACKAGE_luci-app-webadmin=n #Web管理页面设置
 #CONFIG_PACKAGE_luci-app-ddns=y #DDNS服务
-CONFIG_DEFAULT_luci-app-vlmcsd=n #KMS激活服务器
+CONFIG_PACKAGE_luci-app-vlmcsd=n #KMS激活服务器
 #CONFIG_PACKAGE_luci-app-filetransfer=y #系统-文件传输
 CONFIG_PACKAGE_luci-app-autoreboot=y #定时重启
 #CONFIG_PACKAGE_luci-app-upnp=y #通用即插即用UPnP(端口自动转发)
