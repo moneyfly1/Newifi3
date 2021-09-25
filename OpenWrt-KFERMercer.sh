@@ -131,11 +131,11 @@ CONFIG_PACKAGE_luci-app-mtwifi=n
 EOF
 
 # IPv6支持:
-#cat >> .config <<EOF
-#CONFIG_PACKAGE_ipv6helper=y
-#CONFIG_PACKAGE_ip6tables-mod-nat=y
-#CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
-#EOF
+cat >> .config <<EOF
+CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_ip6tables-mod-nat=y
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+EOF
 
 # 多文件系统支持:
 # cat >> .config <<EOF
