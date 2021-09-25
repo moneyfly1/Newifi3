@@ -113,7 +113,7 @@ CONFIG_PACKAGE_kmod-mt76=y
 EOF
 
 # 无线驱动
-#cat >> .config <<EOF
+cat >> .config <<EOF
 #CONFIG_PACKAGE_wireless-regdb=y
 #CONFIG_PACKAGE_kmod-cfg80211=y
 #CONFIG_PACKAGE_kmod-mac80211=y
@@ -127,8 +127,8 @@ EOF
 #CONFIG_PACKAGE_kmod-mt76x2e=n
 #CONFIG_PACKAGE_wpad-openssl=y
 #CONFIG_PACKAGE_wpa-supplicant=y
-#CONFIG_PACKAGE_luci-app-mtwifi=n
-#EOF
+CONFIG_PACKAGE_luci-app-mtwifi=n
+EOF
 
 # IPv6支持:
 #cat >> .config <<EOF
