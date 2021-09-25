@@ -105,31 +105,36 @@ CONFIG_TARGET_ramips_mt7621=y
 CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
 EOF
 
-
-
-
 # 无线驱动
-#cat >> .config <<EOF
-#CONFIG_PACKAGE_wireless-regdb=y
-#CONFIG_PACKAGE_kmod-cfg80211=y
-#CONFIG_PACKAGE_kmod-mac80211=y
-#CONFIG_PACKAGE_MAC80211_DEBUGFS=y
-#CONFIG_PACKAGE_MAC80211_MESH=y
+cat >> .config <<EOF
+CONFIG_PACKAGE_wireless-regdb=y
+CONFIG_PACKAGE_kmod-cfg80211=y
+CONFIG_PACKAGE_kmod-mac80211=y
+CONFIG_PACKAGE_MAC80211_DEBUGFS=y
+CONFIG_PACKAGE_MAC80211_MESH=y
 #use opensource wifi driver
-#CONFIG_PACKAGE_kmod-mt7603=y
-#CONFIG_PACKAGE_kmod-mt7603e=n
-#CONFIG_PACKAGE_kmod-mt76x2=y
-#CONFIG_PACKAGE_kmod-mt76x2-common=y
-#CONFIG_PACKAGE_kmod-mt76x2e=n
-#CONFIG_PACKAGE_wpad-openssl=y
-#CONFIG_PACKAGE_wpa-supplicant=y
+CONFIG_PACKAGE_kmod-mt7603=y
+CONFIG_PACKAGE_kmod-mt7603e=n
+CONFIG_PACKAGE_kmod-mt76x2=y
+CONFIG_PACKAGE_kmod-mt76x2-common=y
+CONFIG_PACKAGE_kmod-mt76x2e=n
+CONFIG_PACKAGE_wpad-openssl=y
+CONFIG_PACKAGE_wpa-supplicant=y
+CONFIG_PACKAGE_luci-app-mtwifi=n
 #EOF
 
 # IPv6支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_ipv6helper=y
-CONFIG_PACKAGE_ip6tables-mod-nat=y
+CONFIG_IPV6=y
 CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_odhcp6c=y
+CONFIG_PACKAGE_odhcpd-ipv6only=y
+CONFIG_PACKAGE_luci-proto-ipv6=y
+CONFIG_PACKAGE_kmod-ipt-nat6=y
+CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_kmod-ip6tables=y
+CONFIG_PACKAGE_kmod-ip6tables-extra=y
 EOF
 
 # 多文件系统支持:
@@ -227,7 +232,6 @@ CONFIG_PACKAGE_luci-app-watchcat=y
 # CONFIG_PACKAGE_luci-app-music-remote-center is not set #PCHiFi数字转盘遥控
 # CONFIG_PACKAGE_luci-app-usb-printer is not set #USB打印机
 #CONFIG_PACKAGE_luci-app-sqm=y #SQM智能队列管理
-#CONFIG_PACKAGE_luci-app-mtwifi=n
 #
 # VPN相关插件(禁用):
 #
