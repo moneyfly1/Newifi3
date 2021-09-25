@@ -124,7 +124,21 @@ EOF
 
 # 无线驱动(开源)
 cat >> .config <<EOF
-CONFIG_PACKAGE_kmod-mt76=y
+#CONFIG_PACKAGE_kmod-mt76=y
+CONFIG_PACKAGE_wireless-regdb=y
+CONFIG_PACKAGE_kmod-cfg80211=y
+CONFIG_PACKAGE_kmod-mac80211=y
+CONFIG_PACKAGE_MAC80211_DEBUGFS=y
+CONFIG_PACKAGE_MAC80211_MESH=y
+#use opensource wifi driver
+CONFIG_PACKAGE_kmod-mt7603=y
+CONFIG_PACKAGE_kmod-mt7603e=n
+CONFIG_PACKAGE_kmod-mt76x2=y
+CONFIG_PACKAGE_kmod-mt76x2-common=y
+CONFIG_PACKAGE_kmod-mt76x2e=n
+CONFIG_PACKAGE_wpad-openssl=y
+CONFIG_PACKAGE_wpa-supplicant=y
+CONFIG_PACKAGE_luci-app-mtwifi=n
 EOF
 
 # IPv6支持:
@@ -227,7 +241,7 @@ CONFIG_PACKAGE_luci-app-watchcat=y
 #CONFIG_PACKAGE_luci-app-hd-idle is not set #磁盘休眠
 #CONFIG_PACKAGE_luci-app-wrtbwmon is not set #实时流量监测
 #CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
-#CONFIG_PACKAGE_luci-app-unblockneteasemusic
+CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_NodeJS=y
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go=y
 # CONFIG_PACKAGE_luci-app-airplay2 is not set #Apple AirPlay2音频接收服务器
