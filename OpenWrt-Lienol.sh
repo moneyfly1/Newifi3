@@ -178,7 +178,7 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 #CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-easymesh=y
+#CONFIG_PACKAGE_luci-app-easymesh=y
 CONFIG_PACKAGE_luci-app-smartdns=y
 #CONFIG_PACKAGE_luci-app-webadmin=n #Web管理页面设置
 #CONFIG_PACKAGE_luci-app-ddns=y #DDNS服务
