@@ -29,9 +29,10 @@ rm -rf ./package/lean/luci-app-unblockmusic
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
-git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
-#git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
+git clone https://github.com/hubbylei/luci-app-clash.git package/luci-app-clash
+git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns.git package/luci-app-smartdns
 git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-openclash package/luci-app-openclash
 
@@ -209,7 +210,7 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 #CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-easymesh=y
+#CONFIG_PACKAGE_luci-app-easymesh=y
 CONFIG_PACKAGE_luci-app-smartdns=y
 #CONFIG_PACKAGE_luci-app-webadmin=n #Web管理页面设置
 #CONFIG_PACKAGE_luci-app-ddns=y #DDNS服务
