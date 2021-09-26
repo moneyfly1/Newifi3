@@ -33,6 +33,7 @@ git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adg
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
 git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
+git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns.git package/luci-app-smartdns
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-openclash package/luci-app-openclash
 
 # 下载自定义软件
@@ -147,9 +148,6 @@ CONFIG_IPV6=y
 CONFIG_KERNEL_IPV6=y
 CONFIG_PACKAGE_ipv6helper=y
 CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
-CONFIG_PACKAGE_6in4=y
-CONFIG_PACKAGE_6rd=y
-CONFIG_PACKAGE_6to4=y
 EOF
 
 # 多文件系统支持:
@@ -174,7 +172,7 @@ EOF
 # 第三方插件选择:
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
-CONFIG_PACKAGE_luci-app-clash=y
+#CONFIG_PACKAGE_luci-app-clash=y
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
@@ -209,8 +207,8 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 #CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-easymesh=y
-#CONFIG_PACKAGE_luci-app-smartdns=y
+#CONFIG_PACKAGE_luci-app-easymesh=y
+CONFIG_PACKAGE_luci-app-smartdns=y
 #CONFIG_PACKAGE_luci-app-webadmin=n #Web管理页面设置
 #CONFIG_PACKAGE_luci-app-ddns=y #DDNS服务
 CONFIG_PACKAGE_luci-app-vlmcsd=n #KMS激活服务器
