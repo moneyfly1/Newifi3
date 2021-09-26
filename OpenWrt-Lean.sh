@@ -8,7 +8,7 @@ cd openwrt
 #ln -s ../../diy ./package/openwrt-packages
 
 # 更新feeds文件
-#sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
+#sed -i 's@#src-git helloworld@src-git helloworl#d@g' feeds.conf.default #启用helloworld
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 #sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-package' feeds.conf.default
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
@@ -19,9 +19,9 @@ cat feeds.conf.default
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
 # 删除软件包
-rm -rf ./package/lean/UnblockNeteaseMusic
-rm -rf ./package/lean/UnblockNeteaseMusic-Go
-rm -rf ./package/lean/luci-app-unblockmusic
+#rm -rf ./package/lean/UnblockNeteaseMusic
+#rm -rf ./package/lean/UnblockNeteaseMusic-Go
+#rm -rf ./package/lean/luci-app-unblockmusic
 
 # 添加第三方软件包
 #git clone https://github.com/gbaoye/openwrt-packages package/openwrt-packages
@@ -31,9 +31,9 @@ rm -rf ./package/lean/luci-app-unblockmusic
 #git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
-git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
-git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
-git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns.git package/luci-app-smartdns
+#git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
+#git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
+#git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns.git package/luci-app-smartdns
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-openclash package/luci-app-openclash
 
 # 下载自定义软件
@@ -194,7 +194,7 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 #CONFIG_PACKAGE_luci-app-easymesh=y
-CONFIG_PACKAGE_luci-app-smartdns=y
+#CONFIG_PACKAGE_luci-app-smartdns=y
 #CONFIG_PACKAGE_luci-app-webadmin=n #Web管理页面设置
 #CONFIG_PACKAGE_luci-app-ddns=y #DDNS服务
 CONFIG_PACKAGE_luci-app-vlmcsd=n #KMS激活服务器
