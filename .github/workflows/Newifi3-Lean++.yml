@@ -1,5 +1,5 @@
 
-name: Newifi3-KFERMercer
+name: Newifi3-Lean++
 
 on:
 # 定时触发
@@ -24,9 +24,9 @@ on:
 #    - '.config'
 
 env:
-  REPO_URL: https://github.com/KFERMercer/OpenWrt
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  DIY_SH: OpenWrt-KFERMercer.sh
+  DIY_SH: OpenWrt-Lean++.sh
   SSH_ACTIONS: false        # SSH 连接 Actions 功能
   UPLOAD_BIN_DIR: true      # 上传 bin 目录。即包含所有 ipk 文件和固件的目录
   UPLOAD_FIRMWARE: true     # 上传固件的目录
@@ -97,7 +97,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: OpenWrt_bin_KFERMercer${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_bin_Lean++${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: openwrt/bin
 
     - name: 整理文件
@@ -113,5 +113,5 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_firmware_KFERMercer${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_firmware_Lean++${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
