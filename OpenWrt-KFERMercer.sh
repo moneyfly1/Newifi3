@@ -7,7 +7,7 @@ cd openwrt
 #ln -s ../../diy ./package/openwrt-packages
 
 # 更新feeds文件
-#sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
+#sed -i 's@#src-git helloworld@src-git helloworl#d@g' feeds.conf.default #启用helloworld
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 #sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-package' feeds.conf.default
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
@@ -28,12 +28,11 @@ cat feeds.conf.default
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
-#git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 #git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
-#git clone https://github.com/joyplayer/luci-app-clash-joy package/luci-app-clash-joy
-#git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns.git package/luci-app-smartdns
 #git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
+#git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns.git package/luci-app-smartdns
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-openclash package/luci-app-openclash
 
 # 下载自定义软件
@@ -55,7 +54,7 @@ cat feeds.conf.default
 #rm -rf feeds/packages/net/haproxy && svn co https://github.com/Lienol/openwrt-packages/net/haproxy feeds/packages/net/haproxy
 
 # 自定义定制选项
-sed -i 's#192.168.1.1#10.1.1.1#g' package/base-files/files/bin/config_generate #定制默认IP
+sed -i 's#192.168.1.1#10.0.0.1#g' package/base-files/files/bin/config_generate #定制默认IP
 #sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings #取消系统默认密码
 #sed -i 's#option commit_interval 24h#option commit_interval 10m#g' feeds/packages/net/nlbwmon/files/nlbwmon.config #修改流量统计写入为10分钟
 #sed -i 's#option database_directory /var/lib/nlbwmon#option database_directory /etc/config/nlbwmon_data#g' feeds/packages/net/nlbwmon/files/nlbwmon.config #修改流量统计数据存放默认位置
@@ -130,23 +129,22 @@ EOF
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
 #CONFIG_PACKAGE_luci-app-clash=y
-#CONFIG_PACKAGE_luci-app-clash-joy=y
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
-#CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
+CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
 #CONFIG_PACKAGE_AdGuardHome=y
 EOF
 
 # ShadowsocksR插件:
-#cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-app-ssr-plus=n
+cat >> .config <<EOF
+CONFIG_PACKAGE_luci-app-ssr-plus=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=n
-#EOF
+EOF
 
 # Passwall插件:
 #cat >> .config <<EOF
@@ -224,17 +222,17 @@ EOF
 
 # LuCI主题:
 cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-theme-atmaterial=y
+CONFIG_PACKAGE_luci-theme-atmaterial=y
 #CONFIG_PACKAGE_luci-theme-bootstrap=y
 #CONFIG_PACKAGE_luci-theme-argon_new=y
 #CONFIG_PACKAGE_luci-theme-argon
 #CONFIG_PACKAGE_luci-theme-netgear=y
 #CONFIG_PACKAGE_luci-theme-edge=y
-#CONFIG_PACKAGE_luci-theme-material=y
+CONFIG_PACKAGE_luci-theme-material=y
 EOF
 
 # 常用软件包:
-cat >> .config <<EOF
+#cat >> .config <<EOF
 #CONFIG_PACKAGE_curl=y
 #CONFIG_PACKAGE_htop=y
 #CONFIG_PACKAGE_nano=y
@@ -242,7 +240,7 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_tree=y
 #CONFIG_PACKAGE_vim-fuller=y
 #CONFIG_PACKAGE_wget=y
-EOF
+#EOF
 
 # 其他软件包:
 cat >> .config <<EOF
