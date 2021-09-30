@@ -70,7 +70,7 @@ jobs:
       run: |
         [ -e files ] && mv files openwrt/files
         chmod +x $DIY_SH
-        cd openwrt
+        cd lede
         ../$DIY_SH
         make defconfig
 
