@@ -76,6 +76,11 @@ CONFIG_TARGET_ramips_mt7621=y
 CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
 EOF
 
+# 选择内核:
+cat >> .config <<EOF
+CONFIG_LINUX_5_4=y
+EOF
+
 # 无线驱动(开源)
 cat >> .config <<EOF
 CONFIG_PACKAGE_kmod-mt76=y
