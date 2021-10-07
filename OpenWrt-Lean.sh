@@ -146,11 +146,11 @@ EOF
 # ShadowsocksR插件:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-ssr-plus=n
-#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
-#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
-#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=n
-#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
-#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=n
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=n
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=n
 EOF
 
 # Passwall插件:
