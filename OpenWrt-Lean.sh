@@ -72,6 +72,11 @@ touch ./.config
 # ========================固件定制部分========================
 # 
 
+# 选择内核:
+cat >> .config <<EOF
+CONFIG_LINUX_5_4=y
+EOF
+
 # 编译固件:
 cat >> .config <<EOF
 CONFIG_TARGET_ramips=y
