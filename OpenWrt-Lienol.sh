@@ -174,7 +174,7 @@ CONFIG_PACKAGE_luci-app-nps=y
 CONFIG_PACKAGE_luci-app-watchcat=y
 #CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_luci-app-sfe=y #高通开源的 Shortcut FE 转发加速引擎
-CONFIG_PACKAGE_luci-app-flowoffload=y #开源 Linux Flow Offload 驱动
+CONFIG_PACKAGE_luci-app-turboacc=y #开源 Linux Flow Offload 驱动
 #CONFIG_PACKAGE_luci-app-haproxy-tcp is not set #Haproxy负载均衡
 #CONFIG_PACKAGE_luci-app-diskman is not set #磁盘管理磁盘信息
 #CONFIG_PACKAGE_luci-app-transmission is not set #TR离线下载
