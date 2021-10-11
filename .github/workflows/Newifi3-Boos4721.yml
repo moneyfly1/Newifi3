@@ -94,7 +94,7 @@ jobs:
         echo "::set-output name=status::success"
 
     - name: 上传BIN目录
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
         name: OpenWrt_bin_Boos4721${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
@@ -111,7 +111,7 @@ jobs:
 
 
     - name: 上传固件
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         name: OpenWrt_firmware_Boos4721${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
