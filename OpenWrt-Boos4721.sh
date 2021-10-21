@@ -171,7 +171,7 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 #CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-app-ttyd=y
-#CONFIG_PACKAGE_luci-app-easymesh=y
+CONFIG_PACKAGE_luci-app-easymesh=n
 CONFIG_PACKAGE_luci-app-smartdns=y
 #CONFIG_PACKAGE_luci-app-webadmin=n #Web管理页面设置
 #CONFIG_PACKAGE_luci-app-ddns=y #DDNS服务
@@ -204,7 +204,7 @@ CONFIG_PACKAGE_luci-app-watchcat=y
 #CONFIG_PACKAGE_luci-app-wrtbwmon is not set #实时流量监测
 #CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
 #CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
-#CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_NodeJS=y
+CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_NodeJS=y
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go=y
 # CONFIG_PACKAGE_luci-app-airplay2 is not set #Apple AirPlay2音频接收服务器
 # CONFIG_PACKAGE_luci-app-music-remote-center is not set #PCHiFi数字转盘遥控
