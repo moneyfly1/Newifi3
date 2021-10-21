@@ -100,7 +100,6 @@ EOF
 #CONFIG_PACKAGE_kmod-mt76x2e=n
 #CONFIG_PACKAGE_wpad-openssl=y
 #CONFIG_PACKAGE_wpa-supplicant=y
-#CONFIG_PACKAGE_luci-app-mtwifi=n
 #EOF
 
 # IPv6支持:
@@ -167,8 +166,7 @@ EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
-#CONFIG_PACKAGE_luci-app-guest-wifi=y
+#CONFIG_PACKAGE_luci-app-mtwifi=n
 CONFIG_PACKAGE_luci-app-ttyd=y
 #CONFIG_PACKAGE_luci-app-easymesh=y
 #CONFIG_PACKAGE_luci-app-smartdns=y
