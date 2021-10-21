@@ -10,7 +10,7 @@ cd openwrt
 #sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 #sed -i '$a src-git Boos4721 https://github.com/Boos4721/OpenWrt-Packages' feeds.conf.default
-sed -i '$a src-git liuran001 https://github.com/liuran001/openwrt-packages' feeds.conf.default
+#sed -i '$a src-git liuran001 https://github.com/liuran001/openwrt-packages' feeds.conf.default
 cat feeds.conf.default
 
 # 更新并安装源
@@ -30,8 +30,8 @@ cat feeds.conf.default
 #git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
 #git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
-#git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
-#git clone https://github.com/110010110/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
+git clone https://github.com/110010110/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns.git package/luci-app-smartdns
 #git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-openclash package/luci-app-openclash
@@ -45,7 +45,7 @@ cat feeds.conf.default
 #rm -rf package/openwrt-packages/luci-app-ssr-plus && svn co https://github.com/fw876/helloworld package/openwrt-packages/helloworld
 #rm -rf package/openwrt-packages/adguardhome && svn co https://github.com/Lienol/openwrt/tree/dev-19.07/package/diy/adguardhome package/openwrt-packages/adguardhome
 #rm -rf package/openwrt-packages/luci-app-adguardhome && svn co https://github.com/kongfl888/luci-app-adguardhome package/openwrt-packages/luci-app-adguardhome
-rm -rf package/openwrt-packages/luci-app-clash && svn co https://github.com/hubbylei/luci-app-clash package/openwrt-packages/luci-app-clash
+#rm -rf package/openwrt-packages/luci-app-clash && svn co https://github.com/hubbylei/luci-app-clash package/openwrt-packages/luci-app-clash
 
 # 添加passwall依赖库
 #git clone https://github.com/kenzok8/small package/small
