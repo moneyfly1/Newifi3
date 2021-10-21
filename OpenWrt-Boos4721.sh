@@ -87,7 +87,7 @@ EOF
 
 # 无线驱动(开源)
 cat >> .config <<EOF
-#CONFIG_PACKAGE_kmod-mt76=y
+CONFIG_PACKAGE_kmod-mt76=y
 #CONFIG_PACKAGE_wireless-regdb=y
 #CONFIG_PACKAGE_kmod-cfg80211=y
 #CONFIG_PACKAGE_kmod-mac80211=y
@@ -167,7 +167,7 @@ EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-mtwifi=n
+#CONFIG_PACKAGE_luci-app-mtwifi=n
 CONFIG_PACKAGE_luci-app-ttyd=y
 CONFIG_PACKAGE_luci-app-easymesh=n
 CONFIG_PACKAGE_luci-app-smartdns=y
