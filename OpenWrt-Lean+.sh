@@ -101,7 +101,6 @@ CONFIG_PACKAGE_kmod-mt76x2e=n
 CONFIG_PACKAGE_hostapd-common=y
 CONFIG_PACKAGE_wpad-openssl=y
 CONFIG_PACKAGE_wpa-supplicant=y
-CONFIG_PACKAGE_luci-app-mtwifi=n
 EOF
 
 # IPv6支持:
@@ -140,7 +139,7 @@ CONFIG_PACKAGE_luci-app-clash=y
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
-CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
+#CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
 #CONFIG_PACKAGE_AdGuardHome=y
 EOF
 
@@ -168,6 +167,7 @@ EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
+CONFIG_PACKAGE_luci-app-mtwifi=n
 #CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 #CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-app-ttyd=y
