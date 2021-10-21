@@ -86,7 +86,7 @@ CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
 EOF
 
 # 无线驱动(开源)
-#cat >> .config <<EOF
+cat >> .config <<EOF
 #CONFIG_PACKAGE_kmod-mt76=y
 #CONFIG_PACKAGE_wireless-regdb=y
 #CONFIG_PACKAGE_kmod-cfg80211=y
