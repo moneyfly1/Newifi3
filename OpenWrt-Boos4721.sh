@@ -86,8 +86,8 @@ CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
 EOF
 
 # 无线驱动(开源)
-cat >> .config <<EOF
-CONFIG_PACKAGE_kmod-mt76=y
+#cat >> .config <<EOF
+#CONFIG_PACKAGE_kmod-mt76=y
 #CONFIG_PACKAGE_wireless-regdb=y
 #CONFIG_PACKAGE_kmod-cfg80211=y
 #CONFIG_PACKAGE_kmod-mac80211=y
@@ -101,7 +101,7 @@ CONFIG_PACKAGE_kmod-mt76=y
 #CONFIG_PACKAGE_hostapd-common=y
 #CONFIG_PACKAGE_wpad-openssl=y
 #CONFIG_PACKAGE_wpa-supplicant=y
-EOF
+#EOF
 
 # IPv6支持:
 cat >> .config <<EOF
