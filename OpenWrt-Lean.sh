@@ -74,7 +74,7 @@ touch ./.config
 
 # 选择内核:
 cat >> .config <<EOF
-CONFIG_LINUX_5_4=y
+#CONFIG_LINUX_5_4=y
 EOF
 
 # 编译固件:
