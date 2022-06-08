@@ -30,8 +30,8 @@ cat feeds.conf.default
 #git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
 #git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
-git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
-git clone https://github.com/110010110/luci-app-adguardhome package/luci-app-adguardhome
+#git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
+#git clone https://github.com/110010110/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns.git package/luci-app-smartdns
 #git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-openclash package/luci-app-openclash
@@ -75,7 +75,7 @@ touch ./.config
 
 # 选择内核:
 cat >> .config <<EOF
-CONFIG_LINUX_5_4=y
+#CONFIG_LINUX_5_4=y
 EOF
 
 # 编译固件:
@@ -135,7 +135,7 @@ EOF
 # 第三方插件选择:
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
-CONFIG_PACKAGE_luci-app-clash=y
+#CONFIG_PACKAGE_luci-app-clash=y
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
@@ -144,14 +144,14 @@ CONFIG_PACKAGE_luci-app-clash=y
 EOF
 
 # ShadowsocksR插件:
-cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-ssr-plus=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=n
-EOF
+#cat >> .config <<EOF
+#CONFIG_PACKAGE_luci-app-ssr-plus=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=n
+#EOF
 
 # Passwall插件:
 #cat >> .config <<EOF
