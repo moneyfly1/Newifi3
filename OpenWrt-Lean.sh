@@ -9,7 +9,7 @@ cd openwrt
 # 更新feeds文件
 #sed -i 's@#src-git helloworld@src-git helloworl#d@g' feeds.conf.default #启用helloworld
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-#sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-package' feeds.conf.default
+sed -i '$a src-git luci-app-adguardhome https://github.com/panther706/luci-app-adguardhome' feeds.conf.default
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 cat feeds.conf.default
 
@@ -28,7 +28,7 @@ cat feeds.conf.default
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
-git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+#git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 #git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
 #git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
