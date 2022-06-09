@@ -45,7 +45,7 @@ cat feeds.conf.default
 #rm -rf package/openwrt-packages/luci-app-ssr-plus && svn co https://github.com/fw876/helloworld package/openwrt-packages/helloworld
 #rm -rf package/openwrt-packages/adguardhome && svn co https://github.com/Lienol/openwrt/tree/dev-19.07/package/diy/adguardhome package/openwrt-packages/adguardhome
 #rm -rf package/openwrt-packages/luci-app-adguardhome && svn co https://github.com/kongfl888/luci-app-adguardhome package/openwrt-packages/luci-app-adguardhome
-rm -rf package/openwrt-packages/luci-app-clash && svn co https://github.com/hubbylei/luci-app-clash package/openwrt-packages/luci-app-clash
+#rm -rf package/openwrt-packages/luci-app-clash && svn co https://github.com/hubbylei/luci-app-clash package/openwrt-packages/luci-app-clash
 
 # 添加passwall依赖库
 #git clone https://github.com/kenzok8/small package/small
