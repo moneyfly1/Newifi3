@@ -167,7 +167,7 @@ EOF
 # 常用LuCI插件:
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-mtwifi=n
-CONFIG_PACKAGE_luci-app-ttyd=y
+#CONFIG_PACKAGE_luci-app-ttyd=y
 #CONFIG_PACKAGE_luci-app-easymesh=y
 #CONFIG_PACKAGE_luci-app-smartdns=y
 #CONFIG_PACKAGE_luci-app-webadmin=n #Web管理页面设置
