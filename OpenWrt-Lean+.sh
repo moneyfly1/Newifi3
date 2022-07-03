@@ -9,7 +9,7 @@ cd openwrt
 # 更新feeds文件
 #sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-#sed -i '$a src-git Boos4721 https://github.com/Boos4721/OpenWrt-Packages' feeds.conf.default
+sed -i '$a src-git Boos4721 https://github.com/Boos4721/OpenWrt-Packages' feeds.conf.default
 #sed -i '$a src-git liuran001 https://github.com/liuran001/openwrt-packages' feeds.conf.default
 cat feeds.conf.default
 
