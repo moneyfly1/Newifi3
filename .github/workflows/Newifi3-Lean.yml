@@ -81,17 +81,16 @@ jobs:
     - name: 下载软件包
       id: package
       run: |
-        cd openwrt && make download -j8
-        find dl -size -1024c -exec ls -l {} \;
-        find dl -size -1024c -exec rm -f {} \;
+        cd openwrt
+        make defconfig
+        make download -j8
 
     - name: 编译固件
       id: compile
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j1 V=s
-        echo "::set-output name=status::success"
+        echo -e "$(($(nproc)+1)) thread compile"
 
     - name: 上传BIN目录
       uses: actions/upload-artifact@main
