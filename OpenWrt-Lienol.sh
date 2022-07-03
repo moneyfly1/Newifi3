@@ -70,9 +70,9 @@ touch ./.config
 # 
 
 # 选择内核:
-cat >> .config <<EOF
-CONFIG_LINUX_5_4=y
-EOF
+#cat >> .config <<EOF
+#CONFIG_LINUX_5_4=y
+#EOF
 
 # 编译固件:
 cat >> .config <<EOF
@@ -163,14 +163,14 @@ CONFIG_PACKAGE_luci-app-autoreboot=y #定时重启
 #CONFIG_PACKAGE_luci-app-upnp=y #通用即插即用UPnP(端口自动转发)
 #CONFIG_PACKAGE_luci-app-accesscontrol=y #上网时间控制
 CONFIG_PACKAGE_luci-app-wol=y #网络唤醒
-CONFIG_PACKAGE_luci-app-frpc=y #Frp内网穿透
+#CONFIG_PACKAGE_luci-app-frpc=y #Frp内网穿透
 #CONFIG_PACKAGE_luci-app-nlbwmon=n #宽带流量监控
 #CONFIG_PACKAGE_luci-app-wrtbwmon=y
 CONFIG_PACKAGE_automount=y
 CONFIG_PACKAGE_coreutils-base64=y
 CONFIG_PACKAGE_luci-app-commands=y
 #CONFIG_PACKAGE_luci-app-jd-dailybonus=y
-CONFIG_PACKAGE_luci-app-nps=y
+#CONFIG_PACKAGE_luci-app-nps=y
 CONFIG_PACKAGE_luci-app-watchcat=y
 #CONFIG_PACKAGE_luci-app-zerotier=y
 #CONFIG_PACKAGE_luci-app-sfe=y #高通开源的 Shortcut FE 转发加速引擎
