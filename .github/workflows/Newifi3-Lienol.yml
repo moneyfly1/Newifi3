@@ -3,8 +3,8 @@ name: Newifi3-Lienol
 
 on:
 # 定时触发
-  schedule:
-    - cron: 0 19 * * 5
+#  schedule:
+#    - cron: 0 19 * * 5
 
 # release触发
   release:
