@@ -7,11 +7,12 @@ cd openwrt
 #ln -s ../../diy ./package/openwrt-packages
 
 # 更新feeds文件
+src-git liuran001_packages https://github.com/liuran001/openwrt-packages
 #sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 #sed -i '$a src-git Boos4721 https://github.com/Boos4721/OpenWrt-Packages' feeds.conf.default
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-cat feeds.conf.default
+#cat feeds.conf.default
 
 # 更新并安装源
 ./scripts/feeds clean
@@ -201,7 +202,7 @@ CONFIG_PACKAGE_luci-app-watchcat=y
 #CONFIG_PACKAGE_luci-app-hd-idle is not set #磁盘休眠
 #CONFIG_PACKAGE_luci-app-wrtbwmon is not set #实时流量监测
 #CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
-CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
+#CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_NodeJS=y
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go=y
 # CONFIG_PACKAGE_luci-app-airplay2 is not set #Apple AirPlay2音频接收服务器
