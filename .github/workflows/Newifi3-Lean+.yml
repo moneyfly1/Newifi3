@@ -41,7 +41,7 @@ jobs:
 
     steps:
     - name: 校验本地文件
-      uses: actions/upload-artifact@v3
+      uses: actions/checkout@main
 
     - name: 初始化编译环境
       env:
