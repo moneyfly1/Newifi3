@@ -89,7 +89,7 @@ jobs:
       id: package
       run: |
         echo -e "$(nproc) thread build."
-        cd lede && make download -j$(nproc)
+        cd openwrt && make download -j$(nproc)
 
     - name: 编译固件
       id: compile
