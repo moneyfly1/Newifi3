@@ -10,9 +10,9 @@ cd openwrt
 #src-git liuran001_packages https://github.com/liuran001/openwrt-packages
 #sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-sed -i '$a src-git Boos4721 https://github.com/Boos4721/OpenWrt-Packages' feeds.conf.default
+#sed -i '$a src-git Boos4721 https://github.com/Boos4721/OpenWrt-Packages' feeds.conf.default
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-#cat feeds.conf.default
+cat feeds.conf.default
 
 # 更新并安装源
 ./scripts/feeds clean
