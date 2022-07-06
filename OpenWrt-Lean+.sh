@@ -11,7 +11,7 @@ cd openwrt
 #sed -i '$a src-git liuran001_packages https://github.com/liuran001/openwrt-packages' feeds.conf.default
 sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-sed -i '$a src-git openwrt-passwall2 https://github.com/xiaorouji/openwrt-passwall2' feeds.conf.default
+#sed -i '$a src-git openwrt-passwall2 https://github.com/xiaorouji/openwrt-passwall2' feeds.conf.default
 cat feeds.conf.default
 
 # 更新并安装源
@@ -137,7 +137,7 @@ EOF
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
 #CONFIG_PACKAGE_luci-app-clash=y
-#CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
+CONFIG_PACKAGE_luci-app-luci-app-vssr=y
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
 CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
@@ -159,8 +159,8 @@ EOF
 #EOF
 
 # Passwall插件:
-cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-passwall2=y
+#cat >> .config <<EOF
+#CONFIG_PACKAGE_luci-app-passwall2=y
 #CONFIG_PACKAGE_https-dns-proxy=y
 #CONFIG_PACKAGE_naiveproxy=y
 #CONFIG_PACKAGE_kcptun-client=y
@@ -168,7 +168,7 @@ CONFIG_PACKAGE_luci-app-passwall2=y
 #CONFIG_PACKAGE_brook=y
 #CONFIG_PACKAGE_trojan-go=y
 #CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
-EOF
+#EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
