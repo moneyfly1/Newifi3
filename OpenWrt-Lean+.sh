@@ -9,9 +9,9 @@ cd openwrt
 # 更新feeds文件
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git liuran001_packages https://github.com/liuran001/openwrt-packages' feeds.conf.default
-sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
+#sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-#sed -i '$a src-git openwrt-passwall2 https://github.com/xiaorouji/openwrt-passwall2' feeds.conf.default
+sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 cat feeds.conf.default
 
 # 更新并安装源
@@ -30,7 +30,8 @@ cat feeds.conf.default
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-git clone https://github.com/jerrykuku/luci-app-vssr luci-app-vssr
+git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lua-maxminddb  
+git clone https://github.com/jerrykuku/luci-app-vssr package/luci-app-vssr
 #git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
 #git clone https://github.com/yang229/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns.git package/luci-app-smartdns
