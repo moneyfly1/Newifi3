@@ -11,7 +11,7 @@ cd openwrt
 #sed -i '$a src-git liuran001_packages https://github.com/liuran001/openwrt-packages' feeds.conf.default
 sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-#sed -i '$a src-git Boos4721 https://github.com/Boos4721/OpenWrt-Packages' feeds.conf.default
+sed -i '$a src-git openwrt-passwall2 https://github.com/xiaorouji/openwrt-passwall2' feeds.conf.default
 cat feeds.conf.default
 
 # 更新并安装源
@@ -29,10 +29,10 @@ cat feeds.conf.default
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
-#git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-#git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
+git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/jerrykuku/luci-app-vssr luci-app-vssr
 #git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
-git clone https://github.com/yang229/luci-app-adguardhome package/luci-app-adguardhome
+#git clone https://github.com/yang229/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns.git package/luci-app-smartdns
 git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 #git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-openclash package/luci-app-openclash
@@ -145,22 +145,22 @@ CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
 EOF
 
 # ShadowsocksR插件:
-cat >> .config <<EOF
-CONFIG_PACKAGE_xray=y
-CONFIG_XRAY_EXCLUDE_ASSETS=y
-CONFIG_XRAY_COMPRESS_UPX=y
-CONFIG_v2ray-plugin_INCLUDE_GOPROXY=y
-CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
-CONFIG_PACKAGE_luci-app-v2ray-server=n
-EOF
+#cat >> .config <<EOF
+#CONFIG_PACKAGE_xray=y
+#CONFIG_XRAY_EXCLUDE_ASSETS=y
+#CONFIG_XRAY_COMPRESS_UPX=y
+#CONFIG_v2ray-plugin_INCLUDE_GOPROXY=y
+#CONFIG_PACKAGE_luci-app-ssr-plus=y
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
+#CONFIG_PACKAGE_luci-app-v2ray-server=n
+#EOF
 
 # Passwall插件:
-#cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-app-passwall=y
+cat >> .config <<EOF
+CONFIG_PACKAGE_luci-app-passwall2=y
 #CONFIG_PACKAGE_https-dns-proxy=y
 #CONFIG_PACKAGE_naiveproxy=y
 #CONFIG_PACKAGE_kcptun-client=y
@@ -168,7 +168,7 @@ EOF
 #CONFIG_PACKAGE_brook=y
 #CONFIG_PACKAGE_trojan-go=y
 #CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
-#EOF
+EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
