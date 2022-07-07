@@ -28,7 +28,7 @@ cat feeds.conf.default
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
-git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+#git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 #git clone https://github.com/hubbylei/luci-app-clash package/luci-app-clash
 #git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
@@ -85,7 +85,7 @@ CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
 EOF
 
 # 无线驱动(开源)
-#cat >> .config <<EOF
+cat >> .config <<EOF
 CONFIG_PACKAGE_kmod-mt76=y
 #CONFIG_PACKAGE_wireless-regdb=y
 #CONFIG_PACKAGE_kmod-cfg80211=y
@@ -100,7 +100,7 @@ CONFIG_PACKAGE_kmod-mt76=y
 #CONFIG_PACKAGE_kmod-mt76x2e=n
 #CONFIG_PACKAGE_wpad-openssl=y
 #CONFIG_PACKAGE_wpa-supplicant=y
-#EOF
+EOF
 
 # IPv6支持:
 #cat >> .config <<EOF
@@ -166,7 +166,7 @@ EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-mtwifi=n
+#CONFIG_PACKAGE_luci-app-mtwifi=n
 CONFIG_PACKAGE_luci-app-guest-wifi=y
 #CONFIG_PACKAGE_luci-app-ttyd=y
 #CONFIG_PACKAGE_luci-app-easymesh=y
