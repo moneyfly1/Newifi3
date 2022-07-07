@@ -24,7 +24,7 @@ on:
 #    - '.config'
 
 env:
-  REPO_URL: https://github.com/KFERMercer/OpenWrt
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   DIY_SH: OpenWrt-Lean+.sh
   SSH_ACTIONS: false        # SSH 连接 Actions 功能
