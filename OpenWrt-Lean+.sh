@@ -19,6 +19,7 @@ cat feeds.conf.default
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
 # 删除软件包
+rm -rf ./package/lean/luci-theme-argon
 #rm -rf ./package/lean/UnblockNeteaseMusic
 #rm -rf ./package/lean/UnblockNeteaseMusic-Go
 #rm -rf ./package/lean/luci-app-unblockmusic
@@ -28,7 +29,7 @@ cat feeds.conf.default
 #git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-#git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
+git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lua-maxminddb  
 git clone https://github.com/jerrykuku/luci-app-vssr package/luci-app-vssr
@@ -236,10 +237,10 @@ EOF
 
 # LuCI主题:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-theme-atmaterial=y
+#CONFIG_PACKAGE_luci-theme-atmaterial=y
 #CONFIG_PACKAGE_luci-theme-bootstrap=y
 #CONFIG_PACKAGE_luci-theme-argon_new=y
-#CONFIG_PACKAGE_luci-theme-argon
+CONFIG_PACKAGE_luci-theme-argon
 #CONFIG_PACKAGE_luci-theme-netgear=y
 #CONFIG_PACKAGE_luci-theme-edge=y
 CONFIG_PACKAGE_luci-theme-material=y
