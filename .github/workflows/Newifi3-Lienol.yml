@@ -11,8 +11,8 @@ on:
     types: [published]
 
 # 点赞触发
-#  watch:
-#    types: [started]
+  watch:
+    types: [started]
 
 # 编辑触发
 #  push:
@@ -25,7 +25,7 @@ on:
 
 env:
   REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: 19.07
+  REPO_BRANCH: master
   DIY_SH: OpenWrt-Lienol.sh
   SSH_ACTIONS: false        # SSH 连接 Actions 功能
   UPLOAD_BIN_DIR: true      # 上传 bin 目录。即包含所有 ipk 文件和固件的目录
