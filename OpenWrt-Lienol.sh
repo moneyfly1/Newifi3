@@ -118,8 +118,8 @@ EOF
 # 第三方插件选择:
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
-CONFIG_PACKAGE_luci-app-clash=y
-CONFIG_PACKAGE_luci-app-luci-app-vssr=y
+#CONFIG_PACKAGE_luci-app-clash=y
+#CONFIG_PACKAGE_luci-app-luci-app-vssr=y
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
@@ -138,8 +138,8 @@ EOF
 #EOF
 
 # Passwall插件:
-#cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-app-passwall=y
+cat >> .config <<EOF
+CONFIG_PACKAGE_luci-app-passwall2=y
 #CONFIG_PACKAGE_https-dns-proxy=y
 #CONFIG_PACKAGE_naiveproxy=y
 #CONFIG_PACKAGE_kcptun-client=y
@@ -147,7 +147,7 @@ EOF
 #CONFIG_PACKAGE_brook=y
 #CONFIG_PACKAGE_trojan-go=y
 #CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
-#EOF
+EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
@@ -216,7 +216,7 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-atmaterial=y
 #CONFIG_PACKAGE_luci-theme-bootstrap=y
 #CONFIG_PACKAGE_luci-theme-argon_new=y
-CONFIG_PACKAGE_luci-theme-argon
+#CONFIG_PACKAGE_luci-theme-argon
 #CONFIG_PACKAGE_luci-theme-netgear=y
 #CONFIG_PACKAGE_luci-theme-edge=y
 CONFIG_PACKAGE_luci-theme-material=y
