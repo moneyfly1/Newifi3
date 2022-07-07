@@ -19,7 +19,7 @@ cat feeds.conf.default
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
 # 删除软件包
-rm -rf ./package/lean/luci-theme-argon
+#rm -rf ./package/lean/luci-theme-argon
 #rm -rf ./package/lean/UnblockNeteaseMusic
 #rm -rf ./package/lean/UnblockNeteaseMusic-Go
 #rm -rf ./package/lean/luci-app-unblockmusic
