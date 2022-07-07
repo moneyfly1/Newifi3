@@ -119,6 +119,7 @@ EOF
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
 CONFIG_PACKAGE_luci-app-clash=y
+CONFIG_PACKAGE_luci-app-luci-app-vssr=y
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
@@ -185,7 +186,7 @@ CONFIG_PACKAGE_luci-app-turboacc=y #开源 Linux Flow Offload 驱动
 #CONFIG_PACKAGE_luci-app-hd-idle is not set #磁盘休眠
 #CONFIG_PACKAGE_luci-app-wrtbwmon is not set #实时流量监测
 #CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
-#CONFIG_PACKAGE_luci-app-unblockneteasemusic=y 
+CONFIG_PACKAGE_luci-app-unblockneteasemusic=y 
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_NodeJS=y
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go=y
 # CONFIG_PACKAGE_luci-app-airplay2 is not set #Apple AirPlay2音频接收服务器
@@ -215,7 +216,7 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-atmaterial=y
 #CONFIG_PACKAGE_luci-theme-bootstrap=y
 #CONFIG_PACKAGE_luci-theme-argon_new=y
-#CONFIG_PACKAGE_luci-theme-argon
+CONFIG_PACKAGE_luci-theme-argon
 #CONFIG_PACKAGE_luci-theme-netgear=y
 #CONFIG_PACKAGE_luci-theme-edge=y
 CONFIG_PACKAGE_luci-theme-material=y
