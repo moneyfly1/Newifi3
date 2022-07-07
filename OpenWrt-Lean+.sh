@@ -29,7 +29,7 @@ cat feeds.conf.default
 #git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+#git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lua-maxminddb  
 git clone https://github.com/jerrykuku/luci-app-vssr package/luci-app-vssr
@@ -176,7 +176,7 @@ EOF
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-mtwifi=n
 #CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
-#CONFIG_PACKAGE_luci-app-guest-wifi=y
+CONFIG_PACKAGE_luci-app-guest-wifi=y
 #CONFIG_PACKAGE_luci-app-ttyd=y
 #CONFIG_PACKAGE_luci-app-easymesh=y
 #CONFIG_PACKAGE_luci-app-smartdns=y
