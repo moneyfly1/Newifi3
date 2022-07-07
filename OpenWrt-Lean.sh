@@ -86,20 +86,20 @@ EOF
 
 # 无线驱动(开源)
 cat >> .config <<EOF
-CONFIG_PACKAGE_kmod-mt76=y
+#CONFIG_PACKAGE_kmod-mt76=y
 #CONFIG_PACKAGE_wireless-regdb=y
 #CONFIG_PACKAGE_kmod-cfg80211=y
 #CONFIG_PACKAGE_kmod-mac80211=y
 #CONFIG_PACKAGE_MAC80211_DEBUGFS=y
 #CONFIG_PACKAGE_MAC80211_MESH=y
-#use opensource wifi driver
-#CONFIG_PACKAGE_kmod-mt7603=y
-#CONFIG_PACKAGE_kmod-mt7603e=n
-#CONFIG_PACKAGE_kmod-mt76x2=y
-#CONFIG_PACKAGE_kmod-mt76x2-common=y
-#CONFIG_PACKAGE_kmod-mt76x2e=n
-#CONFIG_PACKAGE_wpad-openssl=y
-#CONFIG_PACKAGE_wpa-supplicant=y
+# use opensource wifi driver
+CONFIG_PACKAGE_kmod-mt7603=y
+CONFIG_PACKAGE_kmod-mt7603e=n
+CONFIG_PACKAGE_kmod-mt76x2=y
+CONFIG_PACKAGE_kmod-mt76x2-common=y
+CONFIG_PACKAGE_kmod-mt76x2e=n
+CONFIG_PACKAGE_wpad-openssl=y
+CONFIG_PACKAGE_wpa-supplicant=y
 EOF
 
 # IPv6支持:
