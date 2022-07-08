@@ -73,9 +73,9 @@ touch ./.config
 # 
 
 # 选择内核:
-#cat >> .config <<EOF
-#CONFIG_LINUX_5_4=y
-#EOF
+cat >> .config <<EOF
+CONFIG_LINUX_5_15=y
+EOF
 
 # 编译固件:
 cat >> .config <<EOF
@@ -85,22 +85,23 @@ CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
 EOF
 
 # 无线驱动(开源)
-cat >> .config <<EOF
+#cat >> .config <<EOF
 #CONFIG_PACKAGE_kmod-mt76=y
+#CONFIG_PACKAGE_luci-app-mtwifi=n
 #CONFIG_PACKAGE_wireless-regdb=y
 #CONFIG_PACKAGE_kmod-cfg80211=y
 #CONFIG_PACKAGE_kmod-mac80211=y
 #CONFIG_PACKAGE_MAC80211_DEBUGFS=y
 #CONFIG_PACKAGE_MAC80211_MESH=y
 # use opensource wifi driver
-CONFIG_PACKAGE_kmod-mt7603=y
-CONFIG_PACKAGE_kmod-mt7603e=n
-CONFIG_PACKAGE_kmod-mt76x2=y
-CONFIG_PACKAGE_kmod-mt76x2-common=y
-CONFIG_PACKAGE_kmod-mt76x2e=n
-CONFIG_PACKAGE_wpad-openssl=y
-CONFIG_PACKAGE_wpa-supplicant=y
-EOF
+#CONFIG_PACKAGE_kmod-mt7603=y
+#CONFIG_PACKAGE_kmod-mt7603e=n
+#CONFIG_PACKAGE_kmod-mt76x2=y
+#CONFIG_PACKAGE_kmod-mt76x2-common=y
+#CONFIG_PACKAGE_kmod-mt76x2e=n
+#CONFIG_PACKAGE_wpad-openssl=y
+#CONFIG_PACKAGE_wpa-supplicant=y
+#EOF
 
 # IPv6支持:
 #cat >> .config <<EOF
@@ -138,7 +139,7 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
-CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
+#CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
 #CONFIG_PACKAGE_AdGuardHome=y
 EOF
 
@@ -166,7 +167,6 @@ EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-app-mtwifi=n
 CONFIG_PACKAGE_luci-app-guest-wifi=y
 #CONFIG_PACKAGE_luci-app-ttyd=y
 #CONFIG_PACKAGE_luci-app-easymesh=y
