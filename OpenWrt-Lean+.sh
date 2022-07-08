@@ -10,8 +10,8 @@ cd openwrt
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git liuran001_packages https://github.com/liuran001/openwrt-packages' feeds.conf.default
 #sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
-sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
+#sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
+#sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 sed -i '$a src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' feeds.conf.default
 cat feeds.conf.default
 
@@ -52,7 +52,7 @@ git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git packag
 #rm -rf package/openwrt-packages/luci-app-clash && svn co https://github.com/hubbylei/luci-app-clash package/openwrt-packages/luci-app-clash
 
 # 添加passwall依赖库
-#git clone https://github.com/kenzok8/small package/small
+git clone https://github.com/kenzok8/small package/small
 #svn co https://github.com/Lienol/openwrt-package/tree/master/package package/small
 
 # 替换更新haproxy默认版本
@@ -140,8 +140,8 @@ EOF
 # 第三方插件选择:
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
-CONFIG_PACKAGE_luci-app-clash=y
-CONFIG_PACKAGE_luci-app-luci-app-vssr=y
+#CONFIG_PACKAGE_luci-app-clash=y
+#CONFIG_PACKAGE_luci-app-luci-app-vssr=y
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
 CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
