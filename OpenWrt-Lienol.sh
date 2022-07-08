@@ -119,7 +119,7 @@ EOF
 # 第三方插件选择:
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
-#CONFIG_PACKAGE_luci-app-clash=y
+CONFIG_PACKAGE_luci-app-clash=y
 #CONFIG_PACKAGE_luci-app-luci-app-vssr=y
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
