@@ -24,7 +24,7 @@ on:
 #    - '.config'
 
 env:
-  REPO_URL: https://github.com/KFERMercer/OpenWrt
+  REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: master
   DIY_SH: OpenWrt-Boos4721.sh
   SSH_ACTIONS: false        # SSH 连接 Actions 功能
