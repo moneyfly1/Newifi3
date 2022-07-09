@@ -23,7 +23,7 @@ cat feeds.conf.default
 #rm -rf ./package/lean/luci-app-unblockmusic
 
 # 添加第三方软件包
-#git clone https://github.com/gbaoye/openwrt-packages package/openwrt-packages
+git clone https://github.com/kenzok8/small-package package/small-package
 #git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
@@ -124,18 +124,18 @@ EOF
 # EOF
 
 # USB3.0支持:
-# cat >> .config <<EOF
-# CONFIG_PACKAGE_kmod-usb-ohci=y
-# CONFIG_PACKAGE_kmod-usb-ohci-pci=y
-# CONFIG_PACKAGE_kmod-usb2=y
-# CONFIG_PACKAGE_kmod-usb2-pci=y
-# CONFIG_PACKAGE_kmod-usb3=y
-# EOF
+#cat >> .config <<EOF
+#CONFIG_PACKAGE_kmod-usb-ohci=y
+#CONFIG_PACKAGE_kmod-usb-ohci-pci=y
+#CONFIG_PACKAGE_kmod-usb2=y
+#CONFIG_PACKAGE_kmod-usb2-pci=y
+#CONFIG_PACKAGE_kmod-usb3=y
+#EOF
 
 # 第三方插件选择:
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
-#CONFIG_PACKAGE_luci-app-clash=y
+CONFIG_PACKAGE_luci-app-clash=y
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
@@ -155,7 +155,7 @@ EOF
 
 # Passwall插件:
 #cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-app-passwall=y
+CONFIG_PACKAGE_luci-app-passwall2=y
 #CONFIG_PACKAGE_https-dns-proxy=y
 #CONFIG_PACKAGE_naiveproxy=y
 #CONFIG_PACKAGE_kcptun-client=y
@@ -201,7 +201,7 @@ CONFIG_PACKAGE_luci-app-watchcat=y
 #CONFIG_PACKAGE_luci-app-hd-idle is not set #磁盘休眠
 #CONFIG_PACKAGE_luci-app-wrtbwmon is not set #实时流量监测
 #CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
-#CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
+CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_NodeJS=y
 #CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go=y
 # CONFIG_PACKAGE_luci-app-airplay2 is not set #Apple AirPlay2音频接收服务器
