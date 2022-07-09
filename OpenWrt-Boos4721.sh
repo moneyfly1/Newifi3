@@ -66,21 +66,6 @@ sed -i 's#192.168.1.1#10.1.1.1#g' package/base-files/files/bin/config_generate #
 #sed -i 's/config internal themes/config internal themes\n    option atmaterial  \"\/luci-static\/atmaterial\"/g' feeds/luci/modules/luci-base/root/etc/config/luci #修改默认主题
 #sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap #去除默认bootstrap主题
 
-# 添加的 feeds 应用包优先于自带的 feed 里的 app
-echo "重复的包检测：👇"
-./scripts/feeds list  | awk '{if(a[$1]){print $1}else{a[$1]++}}'
-echo "重复的包检测：👆"
-./scripts/feeds list  | awk '{if(a[$1]){print $1}else{a[$1]++}}' | while read pkg_name;do
-
-# 目录是 / 分隔，feeds/xxx/ 一样就不打印
-find feeds/ -maxdepth 4 -type d -name $pkg_name | \
-awk -F/ 'NR==1{a[$2]=$0};NR==2{if(!a[$2]){for(i in a){if(a[i]){printf "%s/ %s\n",$0,a[i]}}}}' | \
-xargs -r -n2 echo  👉 rsync -av --delete
-find feeds/ -maxdepth 4 -type d -name $pkg_name | \
- awk -F/ 'NR==1{a[$2]=$0};NR==2{if(!a[$2]){for(i in a){if(a[i]){printf "%s/ %s\n",$0,a[i]}}}}' | \
-xargs -r -n2 rsync -av --delete
-done
-
 #创建自定义配置文件 - OpenWrt
 
 rm -f ./.config*
