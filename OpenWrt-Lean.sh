@@ -10,7 +10,8 @@ cd openwrt
 #sed -i 's@#src-git helloworld@src-git helloworl#d@g' feeds.conf.default #启用helloworld
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 #sed -i '$a src-git luci-app-adguardhome https://github.com/panther706/luci-app-adguardhome' feeds.conf.default
-#sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 cat feeds.conf.default
 
 # 更新并安装源
@@ -23,7 +24,7 @@ cat feeds.conf.default
 #rm -rf ./package/lean/luci-app-unblockmusic
 
 # 添加第三方软件包
-git clone https://github.com/kenzok8/small-package package/small-package
+#git clone https://github.com/kenzok8/small-package package/small-package
 #git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
