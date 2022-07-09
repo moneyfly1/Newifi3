@@ -81,6 +81,21 @@ jobs:
     #- name: 开启SSH远程连接
       #uses: P3TERX/debugger-action@main
       #if: env.SSH_ACTIONS == 'true'
+      
+    - name: 重复的包检测
+      run: |
+        cd openwrt
+        echo "重复的包检测：👇"
+        ./scripts/feeds list  | awk '{if(a[$1]){print $1}else{a[$1]++}}'
+        echo "重复的包检测：👆"
+        ./scripts/feeds list  | awk '{if(a[$1]){print $1}else{a[$1]++}}' | while read pkg_name;do
+        find feeds/ -maxdepth 4 -type d -name $pkg_name | \
+        awk -F/ 'NR==1{a[$2]=$0};NR==2{if(!a[$2]){for(i in a){if(a[i]){printf "%s/ %s\n",$0,a[i]}}}}' | \
+        xargs -r -n2 echo  👉 rsync -av --delete
+        find feeds/ -maxdepth 4 -type d -name $pkg_name | \
+        awk -F/ 'NR==1{a[$2]=$0};NR==2{if(!a[$2]){for(i in a){if(a[i]){printf "%s/ %s\n",$0,a[i]}}}}' | \
+        xargs -r -n2 rsync -av --delete
+        done
 
     - name: 下载软件包
       id: package
