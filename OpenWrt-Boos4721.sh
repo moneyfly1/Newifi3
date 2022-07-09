@@ -147,17 +147,17 @@ CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
 EOF
 
 # ShadowsocksR插件:
-#cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-app-ssr-plus=n
+cat >> .config <<EOF
+CONFIG_PACKAGE_luci-app-ssr-plus=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
 #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=n
-#EOF
+EOF
 
 # Passwall插件:
-#cat >> .config <<EOF
+cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-passwall=y
 #CONFIG_PACKAGE_https-dns-proxy=y
 #CONFIG_PACKAGE_naiveproxy=y
@@ -166,7 +166,7 @@ CONFIG_PACKAGE_luci-app-passwall=y
 #CONFIG_PACKAGE_brook=y
 #CONFIG_PACKAGE_trojan-go=y
 #CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
-#EOF
+EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
