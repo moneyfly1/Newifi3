@@ -12,7 +12,7 @@ cd openwrt
 #sed -i '$a src-git liuran001_packages https://github.com/liuran001/openwrt-packages' feeds.conf.default
 #sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
+#sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 #sed -i '$a src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' feeds.conf.default
 cat feeds.conf.default
 
@@ -29,7 +29,7 @@ cat feeds.conf.default
 # 添加第三方软件包
 #git clone https://github.com/Boos4721/OpenWrt-Packages package/openwrt-packages
 #git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
-#git clone https://github.com/kenzok8/small-package package/small-package
+git clone https://github.com/kenzok8/small-package package/small-package
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
@@ -142,7 +142,7 @@ EOF
 # 第三方插件选择:
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
-#CONFIG_PACKAGE_luci-app-clash=y
+CONFIG_PACKAGE_luci-app-clash=y
 #CONFIG_PACKAGE_luci-app-luci-app-vssr=y
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
@@ -165,8 +165,8 @@ EOF
 #EOF
 
 # Passwall插件:
-cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-passwall=y
+#cat >> .config <<EOF
+#CONFIG_PACKAGE_luci-app-passwall=y
 #CONFIG_PACKAGE_https-dns-proxy=y
 #CONFIG_PACKAGE_naiveproxy=y
 #CONFIG_PACKAGE_kcptun-client=y
@@ -174,7 +174,7 @@ CONFIG_PACKAGE_luci-app-passwall=y
 #CONFIG_PACKAGE_brook=y
 #CONFIG_PACKAGE_trojan-go=y
 #CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
-EOF
+#EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
@@ -194,12 +194,12 @@ CONFIG_PACKAGE_luci-app-wol=y #网络唤醒
 #CONFIG_PACKAGE_luci-app-frpc=y #Frp内网穿透
 #CONFIG_PACKAGE_luci-app-nlbwmon=n #宽带流量监控
 #CONFIG_PACKAGE_luci-app-wrtbwmon=y
-CONFIG_PACKAGE_automount=y
+#CONFIG_PACKAGE_automount=y
 #CONFIG_PACKAGE_coreutils-base64=y
 #CONFIG_PACKAGE_luci-app-commands=y
 #CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 #CONFIG_PACKAGE_luci-app-nps=y
-CONFIG_PACKAGE_luci-app-watchcat=y
+#CONFIG_PACKAGE_luci-app-watchcat=y
 #CONFIG_PACKAGE_luci-app-zerotier=y
 #CONFIG_PACKAGE_luci-app-sfe=n #高通开源的 Shortcut FE 转发加速引擎
 #CONFIG_PACKAGE_luci-app-flowoffload=y #开源 Linux Flow Offload 驱动
