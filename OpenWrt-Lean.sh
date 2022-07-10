@@ -86,23 +86,23 @@ CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
 EOF
 
 # 无线驱动(开源)
-#cat >> .config <<EOF
+cat >> .config <<EOF
 #CONFIG_PACKAGE_kmod-mt76=y
-#CONFIG_PACKAGE_luci-app-mtwifi=n
+CONFIG_PACKAGE_luci-app-mtwifi=n
 #CONFIG_PACKAGE_wireless-regdb=y
 #CONFIG_PACKAGE_kmod-cfg80211=y
 #CONFIG_PACKAGE_kmod-mac80211=y
 #CONFIG_PACKAGE_MAC80211_DEBUGFS=y
 #CONFIG_PACKAGE_MAC80211_MESH=y
 # use opensource wifi driver
-#CONFIG_PACKAGE_kmod-mt7603=y
-#CONFIG_PACKAGE_kmod-mt7603e=n
-#CONFIG_PACKAGE_kmod-mt76x2=y
-#CONFIG_PACKAGE_kmod-mt76x2-common=y
-#CONFIG_PACKAGE_kmod-mt76x2e=n
-#CONFIG_PACKAGE_wpad-openssl=y
-#CONFIG_PACKAGE_wpa-supplicant=y
-#EOF
+CONFIG_PACKAGE_kmod-mt7603=y
+CONFIG_PACKAGE_kmod-mt7603e=n
+CONFIG_PACKAGE_kmod-mt76x2=y
+CONFIG_PACKAGE_kmod-mt76x2-common=y
+CONFIG_PACKAGE_kmod-mt76x2e=n
+CONFIG_PACKAGE_wpad-openssl=y
+CONFIG_PACKAGE_wpa-supplicant=y
+EOF
 
 # IPv6支持:
 #cat >> .config <<EOF
@@ -145,18 +145,18 @@ CONFIG_PACKAGE_luci-app-clash=y
 EOF
 
 # ShadowsocksR插件:
-cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-ssr-plus=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=n
-EOF
+#cat >> .config <<EOF
+#CONFIG_PACKAGE_luci-app-ssr-plus=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=n
+#EOF
 
 # Passwall插件:
-cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-passwall2=y
+#cat >> .config <<EOF
+#CONFIG_PACKAGE_luci-app-passwall2=y
 #CONFIG_PACKAGE_https-dns-proxy=y
 #CONFIG_PACKAGE_naiveproxy=y
 #CONFIG_PACKAGE_kcptun-client=y
@@ -164,7 +164,7 @@ CONFIG_PACKAGE_luci-app-passwall2=y
 #CONFIG_PACKAGE_brook=y
 #CONFIG_PACKAGE_trojan-go=y
 #CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
-EOF
+#EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
@@ -183,12 +183,12 @@ CONFIG_PACKAGE_luci-app-wol=y #网络唤醒
 #CONFIG_PACKAGE_luci-app-frpc=n #Frp内网穿透
 #CONFIG_PACKAGE_luci-app-nlbwmon=n #宽带流量监控
 #CONFIG_PACKAGE_luci-app-wrtbwmon=y
-CONFIG_PACKAGE_automount=y
+#CONFIG_PACKAGE_automount=y
 #CONFIG_PACKAGE_coreutils-base64=y
 #CONFIG_PACKAGE_luci-app-commands=y
 #CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 #CONFIG_PACKAGE_luci-app-nps=n
-CONFIG_PACKAGE_luci-app-watchcat=y
+#CONFIG_PACKAGE_luci-app-watchcat=y
 #CONFIG_PACKAGE_luci-app-zerotier=y
 #CONFIG_PACKAGE_luci-app-sfe=n #高通开源的 Shortcut FE 转发加速引擎
 #CONFIG_PACKAGE_luci-app-flowoffload=y #开源 Linux Flow Offload 驱动
