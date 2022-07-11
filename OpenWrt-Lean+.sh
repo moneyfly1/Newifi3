@@ -111,14 +111,13 @@ CONFIG_PACKAGE_wpa-supplicant=y
 EOF
 
 # IPv6支持:
-#cat >> .config <<EOF
-#CONFIG_IPV6=y
-#CONFIG_KERNEL_IPV6=y
-#CONFIG_PACKAGE_ipv6helper=y
-#CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
-#CONFIG_PACKAGE_ip6tables=y
-#CONFIG_PACKAGE_iptables-mod-extra=y
-#EOF
+cat >> .config <<EOF
+CONFIG_IPV6=y
+CONFIG_KERNEL_IPV6=y
+CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+CONFIG_PACKAGE_ip6tables=y
+EOF
 
 # 多文件系统支持:
 # cat >> .config <<EOF
@@ -142,7 +141,8 @@ EOF
 # 第三方插件选择:
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
-CONFIG_PACKAGE_luci-app-clash=y
+#CONFIG_PACKAGE_luci-app-clash=y
+CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-luci-app-vssr=y
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 #CONFIG_PACKAGE_luci-app-eqos=y #IP限速
