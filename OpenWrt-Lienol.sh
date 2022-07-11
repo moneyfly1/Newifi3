@@ -88,14 +88,14 @@ CONFIG_PACKAGE_kmod-mt76=y
 EOF
 
 # IPv6支持:
-#cat >> .config <<EOF
-#CONFIG_IPV6=y
-#CONFIG_KERNEL_IPV6=y
-#CONFIG_PACKAGE_ipv6helper=y
-#CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
-#CONFIG_PACKAGE_ip6tables=y
-#CONFIG_PACKAGE_iptables-mod-extra=y
-#EOF
+cat >> .config <<EOF
+CONFIG_IPV6=y
+CONFIG_KERNEL_IPV6=y
+CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+CONFIG_PACKAGE_ip6tables=y
+CONFIG_PACKAGE_iptables-mod-extra=y
+EOF
 
 # 多文件系统支持:
 # cat >> .config <<EOF
